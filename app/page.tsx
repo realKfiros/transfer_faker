@@ -26,7 +26,7 @@ export default function HomePage() {
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<Wrapper>
-				<Title>🎙️ Transfer Faker</Title>
+				<Title>🎙️ Fraudrizio</Title>
 				<TransferForm onSubmit={handleSubmit} loading={loading} />
 				{result && <TransferPost text={result} />}
 			</Wrapper>
