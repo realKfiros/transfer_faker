@@ -4,10 +4,11 @@ import { openai } from '@/lib/openai';
 export async function POST(req: NextRequest) {
 	const { player, team } = await req.json();
 
-	const prompt = `Write a dramatic Fabrizio Romano-style transfer announcement for the player "${player}" joining "${team}". Include phrases like "Here we go!", contract details, and signature flair. Make it short like a tweet.`;
+	const prompt = `Write a dramatic Fabrizio Romano-style transfer announcement for the player "${player}" joining "${team}".
+	Include phrases like "Here we go!", contract details, and signature flair. Make it short like a tweet.`;
 
 	const completion = await openai.chat.completions.create({
-		model: 'gpt-4o',
+		model: 'gpt-4.1',
 		messages: [
 			{
 				role: 'system',
